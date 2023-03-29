@@ -1,4 +1,4 @@
-from decople import config
+from decouple import config
 
 user = config("PGSQL_USER")
 password = config("PGSQL_PASSWORD")
