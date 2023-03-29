@@ -13,6 +13,7 @@ class Payment_methodModel(db.Model):
 	description = db.Column(db.String(100))
 	commission = db.Column(db.Integer)
 	email_contact = db.Column(db.String(100))
+	payments = db.relationship("PaymentModel", backref="payment_method", lazy=True)
 
 
 	def __init__(self, name, description, commission, email_contact):
