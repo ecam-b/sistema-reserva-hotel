@@ -6,7 +6,7 @@ for_him = RoomSchema()
 for_them = RoomSchema(many=True)
 
 
-room_bp = Blueprint("payment", __name__)
+room_bp = Blueprint("room", __name__)
 
 
 @room_bp.route("/", methods=["GET"])

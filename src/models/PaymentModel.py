@@ -9,10 +9,10 @@ class PaymentModel(db.Model):
 
 
 	id = db.Column(db.Integer, primary_key=True, nullable=False)
-	reservation_id = db.Column(db.Integer, db.ForeingKey("reservation.id"), nullable=False)
-	date_payment = db.Column(db.Date, default=date.today)
+	reservation_id = db.Column(db.Integer, db.ForeignKey("reservation.id"), nullable=False)
+	date_payment = db.Column(db.Date)
 	amount_payment = db.Column(db.Numeric(10,2), nullable=False)
-	payment_method_id = db.Column(db.Integer, db.ForeingKey("payment_method.id"), nullable=False)
+	payment_method_id = db.Column(db.Integer, db.ForeignKey("payment_method.id"), nullable=False)
 
 
 	def __init__(self, reservation_id, date_payment, amount_payment, payment_method_id):

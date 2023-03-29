@@ -6,7 +6,7 @@ for_him = Type_roomSchema()
 for_them = Type_roomSchema(many=True)
 
 
-type_room_bp = Blueprint("payment", __name__)
+type_room_bp = Blueprint("type_room", __name__)
 
 
 @type_room_bp.route("/", methods=["GET"])

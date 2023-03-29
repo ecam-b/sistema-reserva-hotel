@@ -6,7 +6,7 @@ for_him = ReservationSchema()
 for_them = ReservationSchema(many=True)
 
 
-reservation_bp = Blueprint("payment", __name__)
+reservation_bp = Blueprint("reservation", __name__)
 
 
 @reservation_bp.route("/", methods=["GET"])

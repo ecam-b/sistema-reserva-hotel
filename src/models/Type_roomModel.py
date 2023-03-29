@@ -19,4 +19,4 @@ class Type_roomModel(db.Model):
 
 class Type_roomSchema(ma.Schema):
 	class Meta:
-		fields = ("description")
+		fields = ("description",)

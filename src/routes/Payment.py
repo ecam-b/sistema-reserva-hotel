@@ -16,4 +16,4 @@ def get_all_payments():
 		result = for_them.dump(payments)
 		return jsonify(result)
 	except Exception as ex:
-		return jsonify({"message": str(ex)})
+		return jsonify({"message": str(ex)}), 400

@@ -5,7 +5,7 @@ ma = Marshmallow()
 
 
 class Payment_methodModel(db.Model):
-	__tablename__ = payment_method
+	__tablename__ = "payment_method"
 
 
 	id = db.Column(db.Integer, primary_key=True, nullable=True)
