@@ -13,6 +13,7 @@ class HotelModel(db.Model):
 	address = db.Column(db.String(100), unique=True)
 	phone = db.Column(db.String(12))
 	email_contact = db.Column(db.String(100))
+	rooms = db.relationship("RoomModel", backref="hotel", lazy=True)
 
 
 	def __init__(self, name, address, phone, email_contact):

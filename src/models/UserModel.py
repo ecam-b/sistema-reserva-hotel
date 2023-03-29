@@ -15,6 +15,7 @@ class UserModel(db.Model):
 	password = db.Column(db.String(300))
 	phone = db.Column(db.String(12))
 	typeuser_id = db.Column(db.Integer, db.ForeignKey("typeuser.id"), nullable=False)
+	reservations = db.relationship("ReservationModel", backref="user", lazy=True)
 
 
 	def __init__(self, private_id, username, name, gmail, password, phone, typeuser_id):

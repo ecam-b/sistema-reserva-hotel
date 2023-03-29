@@ -10,6 +10,7 @@ class Type_roomModel(db.Model):
 
 	id = db.Column(db.Integer, primary_key=True, nullable=False)
 	description = db.Column(db.String(100), unique=True)
+	rooms = db.relationship("RoomModel", backref="type_room", lazy=True)
 
 
 	def __init__(self, description):
