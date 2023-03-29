@@ -16,4 +16,4 @@ def get_all_type_rooms():
 		result = for_them.dump(type_rooms)
 		return jsonify(result)
 	except Exception as ex:
-		return jsonify({"message": str(ex)})
+		return jsonify({"message": str(ex)}) 
