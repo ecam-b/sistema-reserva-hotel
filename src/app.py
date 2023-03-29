@@ -6,7 +6,7 @@ from database.db import db
 # config
 from config import SECRET_KEY, DATABASE_URI_CONNECTION
 # routes
-from routes import Typeuser
+from routes import Typeuser, User
 
 
 app = Flask(__name__)
@@ -26,4 +26,5 @@ with app.app_context():
 if __name__ == "__main__":
 	# blueprints
 	app.register_blueprint(Typeuser.typeuser_bp, url_prefix="/typeuser")
+	app.register_blueprint(User.user_bp, url_prefix="/user")
 	app.run(debug=True)

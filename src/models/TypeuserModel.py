@@ -9,7 +9,7 @@ class TypeuserModel(db.Model):
 
 	id = db.Column(db.Integer, primary_key=True, nullable=False)
 	description = db.Column(db.String(50), unique=True)
-	users = db.relationship("UserModel", backref="typeuser" lazy=True)
+	users = db.relationship("UserModel", backref="typeuser", lazy=True)
 
 
 	def __init__(self, description):

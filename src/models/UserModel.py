@@ -14,7 +14,7 @@ class UserModel(db.Model):
 	gmail = db.Column(db.String(100))
 	password = db.Column(db.String(300))
 	phone = db.Column(db.String(12))
-	typeuser_id = db.Column(db.Integer, db.ForeigKey("typeuser.id"), nullable=False)
+	typeuser_id = db.Column(db.Integer, db.ForeignKey("typeuser.id"), nullable=False)
 
 
 	def __init__(self, private_id, username, name, gmail, password, phone, typeuser_id):

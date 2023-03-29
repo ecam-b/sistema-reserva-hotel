@@ -13,6 +13,6 @@ def get_all_typeusers():
 	try:
 		typeusers = TypeuserModel.query.all()
 		result = for_them.dump(typeusers)
-		jsonify(typeusers)
+		return jsonify(result)
 	except Exception as ex:
 		return jsonify({"message": str(ex)}), 400
